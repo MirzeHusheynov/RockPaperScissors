@@ -15,7 +15,7 @@ let table = document.querySelector("#table")
 function compRandom(){
     let element = ["el","barmaq","yumruq"]
     const randomEl = Math.floor(Math.random()*element.length)
-    computerSecimi.setAttribute("src",`${element[randomEl]}.jpeg`)
+    computerSecimi.setAttribute("src",`RockPaperScissorc/${element[randomEl]}.jpeg`)
     return element[randomEl]
 }
 
@@ -46,20 +46,20 @@ function yoxlama(playerSecimi,komputerSecimi){
 function game(){
 
     yumruqBtn.addEventListener("click",function(){
-     playerSecimi.setAttribute("src","yumruq.jpeg")
+     playerSecimi.setAttribute("src",`RockPaperScissorc/yumruq.jpeg`)
 let compRan = compRandom()
 yoxlama("yumruq",compRan)
  
     })
     elBtn.addEventListener("click",function(){
-        playerSecimi.setAttribute("src","el.jpeg")
+        playerSecimi.setAttribute("src",`RockPaperScissorc/el.jpeg`)
 let compRan = compRandom()
 yoxlama("el",compRan)
   
 
     })
     barmaqBtn.addEventListener("click",function(){
-        playerSecimi.setAttribute("src","barmaq.jpeg")
+        playerSecimi.setAttribute("src",`RockPaperScissorc/barmaq.jpeg`)
 let compRan = compRandom()
 yoxlama("barmaq",compRan)
     })
@@ -85,19 +85,19 @@ function win(){
 
  const duymeIle = addEventListener("keydown",function(e){
     if(e.key == "r"){
-     playerSecimi.setAttribute("src","yumruq.jpeg")
+        playerSecimi.setAttribute("src",`RockPaperScissorc/yumruq.jpeg`)
     let compRan = compRandom()
     yoxlama("yumruq",compRan)
     }
    else if(e.key == "s"){
-        playerSecimi.setAttribute("src","barmaq.jpeg")
-       let compRan = compRandom()
-       yoxlama("barmaq",compRan)
-       }
-    else if(e.key == "p"){
-        playerSecimi.setAttribute("src","el.jpeg")
+    playerSecimi.setAttribute("src",`RockPaperScissorc/el.jpeg`)
        let compRan = compRandom()
        yoxlama("el",compRan)
+       }
+    else if(e.key == "p"){
+        playerSecimi.setAttribute("src",`RockPaperScissorc/barmaq.jpeg`)
+       let compRan = compRandom()
+       yoxlama("barmaq",compRan)
        }
 
     else{
